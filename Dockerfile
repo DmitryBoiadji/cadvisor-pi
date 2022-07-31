@@ -16,6 +16,7 @@ RUN git fetch --tags \
 
 FROM alpine:latest
 MAINTAINER dengnan@google.com vmarmol@google.com vishnuk@google.com jimmidyson@gmail.com stclair@google.com
+RUN sed -i 's,https://dl-cdn.alpinelinux.org,http://dl-4.alpinelinux.org,g' /etc/apk/repositories
 
 RUN apk --no-cache add libc6-compat device-mapper findutils thin-provisioning-tools && \
     echo 'hosts: files mdns4_minimal [NOTFOUND=return] dns mdns4' >> /etc/nsswitch.conf && \
