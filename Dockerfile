@@ -1,5 +1,5 @@
 FROM golang:buster AS builder
-ENV VERSION "v0.44.0"
+ENV VERSION "v0.45.0"
 
 RUN apt-get update \
  && apt-get install make git bash gcc \
